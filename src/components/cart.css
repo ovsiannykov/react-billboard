@@ -1,0 +1,39 @@
+.cart {
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    justify-content: space-between;
+    display: flex;
+    
+    border: 1px solid aliceblue;
+    padding: 20px 25px;
+    border-radius: 20px;
+    color: aliceblue;
+}
+
+.cartText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.cartName {
+    
+    border-bottom: 1px solid aliceblue;
+}
+.cartTtitle {
+    padding: 10px 0;
+}
+.buyBtn {
+border-radius: 20px;
+  font-size: 20px;
+  background-color: aqua;
+  border: none;
+  padding: 10px 20px;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+.buyBtn:hover {
+    transform: translateY(-3px);
+  }
