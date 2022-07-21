@@ -1,10 +1,13 @@
 import "./App.css";
-import Cart from "../src/components/Cart";
+import Cart from "./components/Cart/Cart";
+import Popup from "./components/Pop-up/Popup";
 
 function App() {
   return (
     <div className="App">
+    <Popup/>
       <div className="wrapper">
+        
         <header>
           <div>
             <h2 className="logo">React-BillBoard</h2>
