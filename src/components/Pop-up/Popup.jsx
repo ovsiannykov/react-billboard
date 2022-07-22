@@ -2,7 +2,7 @@ import React from "react";
 import "./popup.css"
 
 
-function Popup(props) {
+function Popup(props) {    // пропсы можно десктуризивроать: {closePopup, и тд}
 const [name,setName] = React.useState();
 const [phone, setPhone] = React.useState();
     function saveInfo() {
