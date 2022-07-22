@@ -1,8 +1,10 @@
+import React from "react";
 import "./App.css";
 import Cart from "./components/Cart/Cart";
 import Popup from "./components/Pop-up/Popup";
 
 function App() {
+const [popupOpened, setPopupOpened] = React.useState(true);
   return (
     <div className="App">
     <Popup/>
