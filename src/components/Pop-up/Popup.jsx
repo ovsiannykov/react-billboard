@@ -1,23 +1,25 @@
+import React from "react";
 import "./popup.css"
 
 
-function Popup () {
-
-    function saveInfo () {
-
+function Popup(props) {
+const [name,setName] = React.useState();
+const [phone, setPhone] = React.useState();
+    function saveInfo() {
+        alert(`${name},обратный звонок заказан на номер: ${phone}`);
     }
-    return(
+    return (
         <div className="popupWrapper">
-        <div className="popupBody">
-            <h2>Заполните информацию</h2>
+            <div className="popupBody">
+                <h2>Заполните информацию</h2>
 
-            <form onSubmit={saveInfo ()}  action="">
-                <input type="text" placeholder="Имя"/>
-                <input type="text" placeholder="Город"/>
-                <button type="submite" className="popupBtn">Сохранить</button>
-            </form>
-            <img src="./images/cross.png" class="popupClose" alt="Close"/>
-        </div>
+                <form>
+                    <input type="text" placeholder="Имя" onChange={e => setName(e.target.value)}/>
+                    <input type="text" placeholder="Телефон" onChange={ e => setPhone(e.target.value)} />
+                    <button onClick={saveInfo} className="popupBtn">Сохранить</button>
+                </form>
+                <img src="./images/cross.png" className="popupClose" onClick={props.closePopup} alt="Close" />
+            </div>
         </div>
     );
 }

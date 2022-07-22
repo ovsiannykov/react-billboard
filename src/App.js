@@ -4,18 +4,20 @@ import Cart from "./components/Cart/Cart";
 import Popup from "./components/Pop-up/Popup";
 
 function App() {
-const [popupOpened, setPopupOpened] = React.useState(true);
+const [popupOpened, setPopupOpened] = React.useState(false);
   return (
     <div className="App">
-    <Popup/>
+    {popupOpened ? <Popup closePopup = {() => setPopupOpened(false)}/> : null}
+
       <div className="wrapper">
         
         <header>
+          
           <div>
             <h2 className="logo">React-BillBoard</h2>
           </div>
           <div className="headerRight">
-            <button className="orderBtn">Добавить обьявление</button>
+            <button onClick={() => setPopupOpened(true)} className="orderBtn">Заказать звонок</button>
             <a href="#" className="headerIcon">
               <img src="/cart.png" alt="card" width={30} height={30} />
             </a>
